@@ -1,0 +1,238 @@
+.header-wrapper{
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #020A19;
+    z-index: 1000;
+}
+
+.header-wrapper.scrolled {
+    background: white;
+    border-bottom: 1px solid #e5e7eb; 
+  }
+
+.header {
+    width: 88%;
+  
+    min-height: 65px;
+    display: flex;
+    padding: 0px 0px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #020A19;
+    color: #fff;
+    z-index: 100;
+}
+
+.header.scrolled {
+    background: white; 
+  }
+
+.hex-logo {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+  .hex-logo.scrolled {
+    color: black; 
+  }
+
+.hamburger-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    height: 18px;
+    width: 24px;
+    padding: 5px;
+    z-index: 15; 
+}
+
+
+.bar {
+    background-color: #fff; 
+    height: 3px;
+    width: 100%;
+    border-radius: 100px;
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu .hamburger-icon .bar {
+    background-color: #000; 
+}
+
+.hamburger-icon .bar.open {
+    background-color: black; 
+}
+
+.hamburger-icon .bar:nth-child(1).open {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-icon .bar:nth-child(2).open {
+    opacity: 0;
+}
+
+.hamburger-icon .bar:nth-child(3).open {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.hamburger-icon.scrolled .bar {
+    background: black 
+  }
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -50vw; 
+    width: 50vw;
+    height: 100vh;
+    background-color: white;
+    border-radius: 5px 0 0 5px;
+    transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateX(100%);
+    overflow: hidden;
+    z-index: 10;
+}
+
+
+.mobile-menu.open {
+    right: 0;
+    opacity: 1; 
+    transform: translateX(0); 
+}
+
+.menu-border {
+    width: 100%;
+    height: 0.8px;
+    background-color:rgb(221, 220, 215);
+    margin-top: 64px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  
+  .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+  }
+ 
+  .menu button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 88%;
+    padding: 12px 12px;
+    background-color:#e30937;
+    font-family: "Mulish", sans-serif;;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    border-radius: 3px;
+  }
+
+  .login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .login-container a{
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    white-space: nowrap;
+    padding: 10px 30px;
+    min-height: 48px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #fff;
+    color: #020a19;
+    font-weight: 500;
+  }
+
+  .header {
+    @media (max-width: 640px) {
+        padding: 8px 8px;
+        min-height: 60px;
+    }
+  }
+
+  .header a{
+    @media (max-width: 640px) {
+        padding: 8px 15px;
+    }
+  }
+
+  .mobile-menu {
+    @media (max-width: 640px) {
+        width: 100%;
+    }
+  }
+
+  .hex-logo {
+    @media (max-width: 640px) {
+        font-size: 25px;
+    }
+  }
+
+  .hamburger-icon{
+    @media (max-width: 640px) {
+        width: 25px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .header {
+      height: 30px; 
+    }
+    .hamburger-icon {
+        height: 20px;
+    }
+
+  } 
+
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998; 
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .backdrop.open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }

@@ -1,0 +1,136 @@
+
+.banner {
+    background-color: #1a1c2b;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .banner-container{
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #1a1c2b;
+  }
+ 
+  .accolades {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  @media (min-width: 768px) {
+    .accolades {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
+  
+  .accolade-item {
+    max-width: 340px;
+    flex: 1 1 27%;
+    padding: 40px 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: "Mulish", sans-serif;
+  }
+  .accolade-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (min-width: 768px) {
+    .accolade-item {
+      text-align: left;
+      padding: 0 10px;
+    }
+  }
+  @media (max-width: 768px) {
+    .accolade-item {
+      padding: 10px 10px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .accolade-item {
+      padding: 0 25px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .accolade-item {
+      padding: 0 45px;
+    }
+  }
+  
+  
+  .accolade-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .accolade-content {
+      align-items: flex-start;
+    }
+  }
+  
+  
+  .accolade-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1c2b;
+  }
+  
+  .accolade-logo img {
+    max-width: 200px;
+    height: 35px;
+    object-fit: cover;
+   
+  }
+
+  .accolade-logo h2{
+    padding: 0;
+    margin: 0;
+    font-size: 28px;
+    color: white;
+    font-family: "Mulish", sans-serif;;
+    
+   }
+
+   @media (max-width: 640px) {
+    .accolade-logo h2 {
+        font-size: 20px; 
+    }
+}
+
+  
+  
+  .accolade-description {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Mulish", sans-serif;;
+  }
+ 
+  .divider {
+    width: 107px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  @media (min-width: 768px) {
+    .divider {
+      height: auto;
+      width: 1.5px;
+      height:150px;
+    }
+  }

@@ -1,0 +1,151 @@
+.carousel-container {
+    width: 88%;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  
+  
+.carousel-container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.slick-prev,
+.slick-next {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    color: #333;
+}
+
+.slick-prev {
+    left: -60px;
+}
+
+.slick-next {
+    right: -60px;
+}
+
+@media (max-width: 786px) {
+    .slick-prev,
+    .slick-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slick-prev {
+        left: -40px;
+    }
+
+    .slick-next {
+        right: -40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .slick-prev,
+    .slick-next {
+        width: 30px;
+        height: 30px;
+    }
+
+    .slick-prev {
+        left: -30px;
+    }
+
+    .slick-next {
+        right: -30px;
+    }
+}
+
+
+
+.custom-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 2;
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.left-arrow {
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-arrow {
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.custom-arrow i {
+    font-size: 20px;
+}
+
+
+@media (max-width: 786px) {
+    .custom-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .left-arrow {
+        left: -40px;
+    }
+
+    .right-arrow {
+        right: -40px;
+    }
+
+    .custom-arrow i {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .custom-arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .left-arrow {
+        left: -30px;
+    }
+
+    .right-arrow {
+        right: -30px;
+    }
+
+    .custom-arrow i {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .custom-arrow {
+        display: none; 
+    }
+
+    .slick-dots {
+        display: block !important; 
+    }
+
+    .slick-prev,
+    .slick-next {
+        display: none !important; 
+    }
+}
